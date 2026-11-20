@@ -1,14 +1,15 @@
-# Tuval Cam
+# Tuval Cam — Resmî Web Sitesi
 
-Tuval Cam'ın resmî web sitesi. Cloudflare Pages üzerinde yayınlanacak statik site.
+**Yayın:** https://www.tuvalcam.com/
 
-## Yayın
+Bu depo, daha önce https://tuvalcam.pages.dev/ adresinde yayımlanan Tuval Cam sitesinin HTML, CSS, JavaScript ve 16 galeri fotoğrafından aktarılmış hâlidir.
 
-- Alan adı: https://www.tuvalcam.com
-- Önceki önizleme: https://tuvalcam.pages.dev
-- Framework: düz HTML / CSS / JavaScript
-- Cloudflare Pages: Build command boş; output directory `/`
+## GitHub Pages
 
-`index.html` ana sayfayı ve tarayıcıda çalışan ürün rotalarını içerir. `photo-gallery.css`, `photo-gallery.js` ve `assets/gallery/` fotoğraf galerisidir. Form teklifi WhatsApp bağlantısı ile iletir.
+Repository Settings → Pages → Build and deployment → Deploy from a branch → Branch: `main` ve `/(root)` → Save.
 
-> Görsel ve metinleri düzenledikten sonra `main` dalındaki değişiklikler Cloudflare Pages üzerinden yayınlanmalıdır.
+**Custom domain:** `www.tuvalcam.com` (kök dizindeki `CNAME`). DNS sağlayıcısındaki `www` CNAME kaydı `tuvalcam.github.io` hedefini göstermelidir. Kök alan adı `tuvalcam.com` istenirse GitHub Pages A kayıtlarıyla yönlendirilir.
+
+Site statiktir; derleme komutu yoktur. `index.html` ana sayfadır. `cam/`, `ayna/`, `cerceve/`, `sineklik/` klasörleri doğrudan URL açılışlarını destekler. Ürün galerisi `photo-gallery.js` ve `photo-gallery.css` ile, görseller `assets/gallery/` ile sunulur. Teklif formu WhatsApp üzerinden açılır.
+
+Eski Cloudflare Pages yayını GitHub Pages aktivasyonu ve DNS doğrulaması tamamlanana kadar korunmalıdır.

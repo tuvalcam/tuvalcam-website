@@ -3,9 +3,11 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.tuvalcam.com/</loc>
+    <lastmod>2026-11-21</lastmod>
   </url>
   <url>
     <loc>https://www.tuvalcam.com/cam/</loc>
+    <lastmod>2026-11-21</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-001.webp</image:loc>
     </image:image>
@@ -69,6 +71,7 @@
   </url>
   <url>
     <loc>https://www.tuvalcam.com/ayna/</loc>
+    <lastmod>2026-11-21</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-003.webp</image:loc>
     </image:image>
@@ -102,6 +105,7 @@
   </url>
   <url>
     <loc>https://www.tuvalcam.com/cerceve/</loc>
+    <lastmod>2026-11-21</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-002.webp</image:loc>
     </image:image>
@@ -459,6 +463,7 @@
   </url>
   <url>
     <loc>https://www.tuvalcam.com/sineklik/</loc>
+    <lastmod>2026-11-21</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-006.webp</image:loc>
     </image:image>
@@ -492,6 +497,7 @@
   </url>
   <url>
     <loc>https://www.tuvalcam.com/galeri/</loc>
+    <lastmod>2026-11-21</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-014.webp</image:loc>
     </image:image>
@@ -529,5 +535,6 @@
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-176.webp</image:loc>
     </image:image>
   </url>
-  <url><loc>https://www.tuvalcam.com/izmir/</loc></url>
+  <url><loc>https://www.tuvalcam.com/izmir/</loc>
+    <lastmod>2026-11-21</lastmod></url>
 </urlset>

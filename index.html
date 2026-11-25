@@ -2,14 +2,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#111c21">
-<title>İzmir Camcı, Ayna, Çerçeve ve Sineklik | Tuval Cam Buca</title>
-<meta name="description" content="Buca Şirinyer'deki Tuval Cam, İzmir'in 30 ilçesinden cam, özel ölçü ayna, çerçeve ve sineklik taleplerini değerlendiriyor. Ölçü ve teklif için ulaşın.">
+<title>Tuval Cam | Buca Camcı, Ayna, Çerçeve ve Sineklik</title>
+<meta name="description" content="İzmir Buca Şirinyer'de cam kesimi ve cam değişimi, özel ölçü ayna, çerçeve ve sineklik çözümleri. İzmir ilçelerinden teklif almak için Tuval Cam'a ulaşın.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="64x64">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
 <link rel="canonical" href="https://www.tuvalcam.com/">
 <meta property="og:type" content="website"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Tuval Cam">
-<meta property="og:title" content="İzmir Camcı, Ayna, Çerçeve ve Sineklik | Tuval Cam Buca"><meta property="og:description" content="Buca Şirinyer'deki Tuval Cam, İzmir'in 30 ilçesinden cam, özel ölçü ayna, çerçeve ve sineklik taleplerini değerlendiriyor. Ölçü ve teklif için ulaşın."><meta property="og:url" content="https://www.tuvalcam.com/"><meta property="og:image" content="https://www.tuvalcam.com/assets/gallery/photo-001.webp"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="Tuval Cam | Buca Camcı, Ayna, Çerçeve ve Sineklik"><meta property="og:description" content="İzmir Buca Şirinyer'de cam kesimi ve cam değişimi, özel ölçü ayna, çerçeve ve sineklik çözümleri. İzmir ilçelerinden teklif almak için Tuval Cam'a ulaşın."><meta property="og:url" content="https://www.tuvalcam.com/"><meta property="og:image" content="https://www.tuvalcam.com/assets/gallery/photo-001.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
@@ -167,7 +167,7 @@ var main=document.getElementById("home-content"),detail=document.getElementById(
 function showRoute(){
  var path=decodeURIComponent(location.pathname.replace(/^\/+|\/+$/g,""));
  var item=categories[path];document.querySelectorAll(".gallery-tabs a").forEach(a=>{a.classList.toggle("active",a.getAttribute("href")==="/"+path)});
- if(!item){main.hidden=false;detail.hidden=true;document.querySelector('link[rel="canonical"]').href="https://www.tuvalcam.com/";var selected=new URLSearchParams(location.search).get("hizmet");if(mapKey[selected])document.getElementById("group").value=mapKey[selected];document.title="İzmir Camcı, Ayna, Çerçeve ve Sineklik | Tuval Cam Buca";if(location.hash){setTimeout(function(){var el=document.getElementById(location.hash.substring(1));if(el)el.scrollIntoView({behavior:"smooth"});},90)}return;}
+ if(!item){main.hidden=false;detail.hidden=true;document.querySelector('link[rel="canonical"]').href="https://www.tuvalcam.com/";var selected=new URLSearchParams(location.search).get("hizmet");if(mapKey[selected])document.getElementById("group").value=mapKey[selected];document.title="Tuval Cam | Buca Camcı, Ayna, Çerçeve ve Sineklik";if(location.hash){setTimeout(function(){var el=document.getElementById(location.hash.substring(1));if(el)el.scrollIntoView({behavior:"smooth"});},90)}return;}
  main.hidden=true;detail.hidden=false;document.getElementById("detail-kicker").textContent=item.kicker;document.getElementById("detail-title").textContent=item.title;document.getElementById("detail-lead").textContent=item.lead;document.getElementById("detail-headline").textContent=item.headline;document.getElementById("detail-body").textContent=item.body;document.getElementById("detail-guidance").textContent=item.guidance;document.getElementById("detail-icon").src=photoURL(covers[path]);renderGallery(path);
  document.getElementById("detail-options").innerHTML="";
  item.options.forEach(function(op,i){var box=document.createElement("div");box.className="option-card";var number=document.createElement("div");number.className="option-num";number.textContent="SİSTEM "+String(i+1).padStart(2,"0");var h=document.createElement("h3");h.textContent=op[0];var p=document.createElement("p");p.textContent=op[1];box.append(number,h,p);document.getElementById("detail-options").appendChild(box)});

@@ -1,3 +1,17 @@
+# Tuval Cam - search engine and AI search accessibility
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://www.tuvalcam.com/sitemap.xml

@@ -1,0 +1,42 @@
+name: Restore six Tuval Cam gallery photos
+
+on:
+  push:
+    paths:
+      - ".github/workflows/restore-gallery-photos.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: restore-tuval-gallery
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install image converter
+        run: python -m pip install --quiet "Pillow>=11.0"
+      - name: Download and validate six missing images
+        run: python scripts/restore_gallery_photos.py
+      - name: Save restored local assets and source updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/gallery/photo-015.webp assets/gallery/photo-031.webp assets/gallery/photo-047.webp assets/gallery/photo-064.webp assets/gallery/photo-081.webp assets/gallery/photo-100.webp
+          git add photo-gallery.js sitemap.xml index.html cam/index.html ayna/index.html cerceve/index.html sineklik/index.html galeri/index.html izmir/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Restore six original Tuval Cam gallery images as local WebP files"
+            git push origin HEAD:main
+          fi

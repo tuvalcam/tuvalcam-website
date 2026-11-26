@@ -68,7 +68,10 @@
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-126.webp</image:loc>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-015.webp</image:loc>
+    </image:image>
+</url>
   <url>
     <loc>https://www.tuvalcam.com/ayna/</loc>
     <lastmod>2026-11-26</lastmod>
@@ -460,7 +463,22 @@
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-175.webp</image:loc>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-031.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-047.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-064.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-081.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tuvalcam.com/assets/gallery/photo-100.webp</image:loc>
+    </image:image>
+</url>
   <url>
     <loc>https://www.tuvalcam.com/sineklik/</loc>
     <lastmod>2026-11-26</lastmod>

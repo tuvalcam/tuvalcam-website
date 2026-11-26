@@ -1,0 +1,85 @@
+name: Notify Bing and IndexNow about Tuval Cam updates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/indexnow.yml"
+      - "index.html"
+      - "cam/index.html"
+      - "ayna/index.html"
+      - "cerceve/index.html"
+      - "sineklik/index.html"
+      - "galeri/index.html"
+      - "izmir/index.html"
+      - "sitemap.xml"
+      - "robots.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tuvalcam-indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify public IndexNow key is deployed
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="a3f1c05d8e62b409a71cdb25f6409e8d"
+          key_url="https://www.tuvalcam.com/${key}.txt"
+          verified=0
+          for attempt in $(seq 1 20); do
+            actual=$(curl -fsSL --max-time 15 "$key_url" 2>/dev/null || true)
+            if [ "$actual" = "$key" ]; then
+              echo "IndexNow key verified on live Tuval Cam site"
+              verified=1
+              break
+            fi
+            sleep 12
+          done
+          if [ "$verified" != "1" ]; then
+            echo "::error::IndexNow ownership key unavailable at $key_url"
+            exit 1
+          fi
+      - name: Submit seven canonical pages to Bing IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/tuvalcam-indexnow.json <<'JSON'
+          {
+            "host": "www.tuvalcam.com",
+            "key": "a3f1c05d8e62b409a71cdb25f6409e8d",
+            "keyLocation": "https://www.tuvalcam.com/a3f1c05d8e62b409a71cdb25f6409e8d.txt",
+            "urlList": [
+              "https://www.tuvalcam.com/",
+              "https://www.tuvalcam.com/cam/",
+              "https://www.tuvalcam.com/ayna/",
+              "https://www.tuvalcam.com/cerceve/",
+              "https://www.tuvalcam.com/sineklik/",
+              "https://www.tuvalcam.com/galeri/",
+              "https://www.tuvalcam.com/izmir/"
+            ]
+          }
+          JSON
+          for attempt in 1 2 3; do
+            status=$(curl -sS --max-time 30 -o /tmp/tuvalcam-indexnow-response \
+              -w '%{http_code}' -X POST 'https://www.bing.com/indexnow' \
+              -H 'Content-Type: application/json; charset=utf-8' \
+              --data-binary @/tmp/tuvalcam-indexnow.json || true)
+            echo "IndexNow attempt $attempt HTTP $status"
+            if [ "$status" = "200" ] || [ "$status" = "202" ]; then
+              echo "Bing accepted IndexNow URL notification (7 canonical pages); indexing is not guaranteed"
+              exit 0
+            fi
+            cat /tmp/tuvalcam-indexnow-response || true
+            sleep 15
+          done
+          echo "::error::Bing did not accept IndexNow submission"
+          exit 1

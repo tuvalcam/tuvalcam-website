@@ -12,6 +12,12 @@ on:
       - "sineklik/index.html"
       - "galeri/index.html"
       - "izmir/index.html"
+      - "pencere-cami-degisimi/index.html"
+      - "vitrin-cami/index.html"
+      - "banyo-aynasi/index.html"
+      - "paspartulu-cerceve/index.html"
+      - "pileli-sineklik/index.html"
+      - "sabit-sineklik/index.html"
       - "sitemap.xml"
       - "robots.txt"
   workflow_dispatch:
@@ -48,7 +54,7 @@ jobs:
             echo "::error::IndexNow ownership key unavailable at $key_url"
             exit 1
           fi
-      - name: Submit seven canonical pages to Bing IndexNow
+      - name: Submit all thirteen canonical pages to Bing IndexNow
         shell: bash
         run: |
           set -euo pipefail
@@ -64,7 +70,13 @@ jobs:
               "https://www.tuvalcam.com/cerceve/",
               "https://www.tuvalcam.com/sineklik/",
               "https://www.tuvalcam.com/galeri/",
-              "https://www.tuvalcam.com/izmir/"
+              "https://www.tuvalcam.com/izmir/",
+              "https://www.tuvalcam.com/pencere-cami-degisimi/",
+              "https://www.tuvalcam.com/vitrin-cami/",
+              "https://www.tuvalcam.com/banyo-aynasi/",
+              "https://www.tuvalcam.com/paspartulu-cerceve/",
+              "https://www.tuvalcam.com/pileli-sineklik/",
+              "https://www.tuvalcam.com/sabit-sineklik/"
             ]
           }
           JSON
@@ -75,7 +87,7 @@ jobs:
               --data-binary @/tmp/tuvalcam-indexnow.json || true)
             echo "IndexNow attempt $attempt HTTP $status"
             if [ "$status" = "200" ] || [ "$status" = "202" ]; then
-              echo "Bing accepted IndexNow URL notification (7 canonical pages); indexing is not guaranteed"
+              echo "Bing accepted IndexNow URL notification (13 canonical pages); indexing is not guaranteed"
               exit 0
             fi
             cat /tmp/tuvalcam-indexnow-response || true

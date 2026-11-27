@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.tuvalcam.com/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://www.tuvalcam.com/cam/</loc>
@@ -515,7 +515,7 @@
   </url>
   <url>
     <loc>https://www.tuvalcam.com/galeri/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <image:image>
       <image:loc>https://www.tuvalcam.com/assets/gallery/photo-014.webp</image:loc>
     </image:image>
@@ -554,5 +554,29 @@
     </image:image>
   </url>
   <url><loc>https://www.tuvalcam.com/izmir/</loc>
-    <lastmod>2026-11-26</lastmod></url>
+    <lastmod>2026-11-27</lastmod></url>
+  <url>
+    <loc>https://www.tuvalcam.com/pencere-cami-degisimi/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tuvalcam.com/vitrin-cami/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tuvalcam.com/banyo-aynasi/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tuvalcam.com/paspartulu-cerceve/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tuvalcam.com/pileli-sineklik/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tuvalcam.com/sabit-sineklik/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
 </urlset>

@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 48 48"><title>Tuval Cam</title><image width="48" height="48" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAMFBMVEX////+//7+/v/+/v79/f39/Pv9/Pr8/Pz09fbh0abgy5Dex4nYw4ZNW28GHDkBDSvc6dinAAABaElEQVR42tWUsUvDQBSHv2sOdGouiLhJJ+3QlmDdRBCH6t/hooKTinVwEBwUJ10dncVJECRiwU1aLSo4FBR0VZqu2iYOJjVpruDqm5J89/u9d+8uTxSHMiTDu6OINorS3NcqtuTohNIpXiXepOb7CRJRSnp5CgmVfALkIaWtyQUJgBWr1IEAdJwocAxbBWBgL2bUqAcKeX8eA8fqI8yhXKHwXYSCpqCbA1d4N/WSSfrImM24EUB6Z5sXYJHBJxUB4mG37AJsiM9CKwLMsxVnGuAwJ6eiwN/JhSW1sz85UgB+w/4t1jh1Q0U7m42cY6Vm2GET5Xp0f+WZbg7/Ktar3xy6+E/A7QfUn6xSAHYSCA+grhKgemBCa/kyfJfhw+YwwNLISY9iemzVsixrfOGxV9F8BuArftvhurYW3PVgH13F3E+lnateq3fnj02UMKP5OUHiX2jWzyNJVfVWb7fakVHoO2REv7H0DdJUWIDIwqDGAAAAAElFTkSuQmCC"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+<title>Tuval Cam — T logo</title>
+<rect width="192" height="192" fill="#ffffff"/>
+<rect x="11" y="11" width="170" height="170" fill="none" stroke="#b78a24" stroke-width="3.5"/>
+<path d="M371 0V121H569V1356H160V1120H23V1493H1503V1120H1368V1356H956V121H1155V0Z" transform="translate(40.8243 155.6450) scale(0.074999 -0.074999)" fill="#091d39"/>
+</svg>
